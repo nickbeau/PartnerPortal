@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-   <title>PowerShell API &gt; Overview</title>
+   <title>OnePractice &gt; Template Manager &gt; Creating &amp; Saving Template Documents &gt; Standard Template Fields</title>
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,7 +79,7 @@
    <script type="text/javascript" src="helpman_topicinit.js"></script>
 
    <script type="text/javascript">
-     HMSyncTOC("index.html", "overview5.html");
+     HMSyncTOC("index.html", "standard-template-fields.html");
    </script>
    <script type="text/javascript" src="highlight.js"></script>
    <script type="text/javascript">
@@ -89,26 +89,26 @@
 <body>
 
 
-<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Overview</span></h1>
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Standard Template Fields</span></h1>
 </div>
 <div id="idheader">
 <div id="idheaderbg">
 <table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
   <tr>
     <td class="topichead" style="text-align:left; vertical-align:bottom">
-      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?overview5.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?standard-template-fields.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
       <p class="crumbs"><b>Navigation:</b>&nbsp;
       
-      <a href="powershell-api.html">PowerShell API</a>&nbsp;&gt;</p>
+      <a href="onepractice.html">OnePractice</a> &gt; <a href="template-manager.html">Template Manager</a> &gt; <a href="creating--saving-template-docu.html">Creating &amp; Saving Template Documents</a>&nbsp;&gt;</p>
    
-      <h1 class="p_Heading1"><span class="f_Heading1">Overview</span></h1>
+      <h1 class="p_Heading1"><span class="f_Heading1">Standard Template Fields</span></h1>
 
     </td>
     <td class="topichead" id="idnav">
       
-      <a href="powershell-api.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
-      <a href="powershell-api.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
-      <a href="sharepoint-document-migrator.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      <a href="creating--saving-template-docu.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="creating--saving-template-docu.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="custom-prompt-template-fields.html" title="Next Topic"><span class="hmbtnnext"></span></a>
       
     </td>
   </tr>  
@@ -121,7 +121,26 @@
 <!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
 
 <!--ZOOMRESTART-->
-<p>Enter topic text here.</p>
+<p>Standard Template fields are used to merge Xero Practice Manager Client or Job data with your template. Each of these fields will be populated by data from the selected Client or Job in Xero Practice Manager when the document merge is processed. Alternative field and Default Text options are available as in the examples below.</p>
+<p>&nbsp;</p>
+<p>Example 1. A simple Standard Field to show the Xero Practice Manager client name in the template</p>
+<p>&nbsp;</p>
+<p>«ClientName»</p>
+<p>&nbsp;</p>
+<p>Example 2. A simple Standard Field to show the Xero Practice Manager Job Name in the template</p>
+<p>&nbsp;</p>
+<p>«JobName»</p>
+<p>&nbsp;</p>
+<p>Example 3. A complex Standard Field to show the Xero Practice Manager “Client Postal Address” and if this has no data show the alternative field Client Address and if this has no data show the default text “No Data Available”. Note the pipe-character separators “|” between each field.</p>
+<p>&nbsp;</p>
+<p>«ClientPostalAddress|ClientAddress|No Data Available»</p>
+<p>&nbsp;</p>
+<p>Example 4. A complex Standard Field to show the Xero Practice Manager Job Due Date and if this has no data show the default text “No Due Date Available”. Note the pipe-character separators “|” between each field including the blank in the middle. When using alternative options three (3) pipe characters are required always in the form Field | Alternative Field | Default Text. </p>
+<p>&nbsp;</p>
+<p>«JobDueDate| |No Due Date Available»</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <!--ZOOMSTOP-->
 </div></div>
