@@ -2,8 +2,8 @@
 hr { color: #000000}
 body, table, tr, th /* Normal */
 {
- font-size: 13px;
- font-family: Arial,Helvetica,sans-serif;
+ font-size: 16px;
+ font-family: Tahoma,Geneva,Verdana,sans-serif;
  font-style: normal;
  font-weight: normal;
  color: #000000;
@@ -46,7 +46,7 @@ p /* Normal */
 }
 .p_Comment /* Comment */
 {
- font-size: 13px;
+ font-size: 16px;
 }
 .p_Heading1 /* Heading1 */
 {
@@ -63,7 +63,7 @@ p /* Normal */
 }
 .p_Notes /* Notes */
 {
- font-size: 13px;
+ font-size: 16px;
 }
 
 

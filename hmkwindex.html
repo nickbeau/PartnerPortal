@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html><head>
-   <title>HubOne One Platforms</title>
+   <title>HubOne Partner Portal</title>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name="robots" content="noindex,follow" />
@@ -9,213 +9,324 @@
    <!-- This line includes the general project style sheet (not required) -->
    <link type="text/css" href="default.css" rel="stylesheet" />
 
+   <script type="text/javascript">isIE=false</script>
+   <!--[if IE]>
+   <script type="text/javascript">isIE=true</script>
+   <![endif]-->
+
+   <!--HM_KEYWORD_INDEX_AS_LIST-->
    <style type="text/css">
-       body { background:#FFF; }
-       #idx          { margin: 0; padding: 0 }     /* div tag that wraps the keyword index */
-       #idx a        { color: #000; text-decoration: none }  /* all links in index appear as text */
-
-       #idx p             { margin: 2px }        /* keywords and secondary keywords */
-	   #idx p.hilite { background-color: #adadad; padding-left: 5px; padding-bottom: 1px;}
-	   #idx p.hilite span {color: white; font-weight: bold;}
-       #idx p.idxkeyword2 { margin-left: 20px }  /* indentation for secondary keywords */
-
-       table.idxtable { background: #F4F4F4;
-                        border: thin solid #000000;
-                        border-collapse: collapse;
-                        -moz-box-shadow: 2px 2px 2px #B0B0B0;
-                        -webkit-box-shadow: 2px 2px 2px #B0B0B0;
-                        box-shadow: 2px 2px 2px #B0B0B0;
-                        filter: progid:DXImageTransform.Microsoft.Shadow(color=B0B0B0, Direction=135, Strength=4); }
-       td.idxtable    { background: #F4F4F4 }
-
-       /* font definitions for keyword section, keywords and popup links */
-       .idxsection  { font-weight: bold; font-size: 1.5em; color: #555; text-decoration: none; margin-top: 1em; margin-bottom: 1em; }
-       .idxkeyword  { font-weight: normal; font-size: 1.1em; color: #000000; text-decoration: none; }
-       .idxkeyword2 { font-weight: normal; font-size: 1.1em; color: #000000; text-decoration: none; }
-       .idxlink     { font-weight: normal; font-size: 1.1em; color: #000000; text-decoration: none; }
-
-   </style>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="helpman_settings.js"></script>  
-<script type="text/javascript">
- $(document).ready(function(){
- var parentScope = (parent.hmNavigationFrame);
- if (parentScope) parent.currentNav("index");
-	$("a[target='hmcontent']").on("click",function(event){
-		$("p.hilite").removeClass("hilite");
-		$(this).parent("p").addClass("hilite");
-		if (parentScope)
-			window.parent.showNav("toggle");
-		});
-});
-</script>
+       body { 
+        margin: 0; 
+        padding: 0; 
+        width: 100%;
+        height: 100%;
+        }
+       #keyword_entry_div {
+       	position: absolute;
+       	left: 5px;
+       	top: 5px;
+       	right: 5px;
+       	} 
+       #keyword_entry_div p {
+       	font-weight: bold;
+       }
+       #keyword_list_div {
+       	position: absolute;
+       	left: 5px;
+       	top: 45px;
+       	right: 5px;
+       	bottom: 5px;
+       	padding:0;
+       	} 
+       #keyword_entry {
+       	border: 1px solid silver;
+       	width: 100px;
+       	}
+       #keyword_list {
+       	border: 1px solid silver;
+       	width: 100%;
+      	height: 100%; 
+       	}
+       #keyword_menu {
+        display: none;
+	background: #fff;
+       	border: 1px solid silver;
+	padding: 10px;
+	box-shadow: 4px 4px 8px #888;
+	border-radius: 6px 6px;
+       	}
+       #keyword_menu a {
+       	display: block;
+        text-decoration: none;
+	color: #000;
+	padding: 2px 2px 2px 18px;
+	background: url(hm-keyword-page-icon.png) 2px 2px no-repeat;
+       	}
+       #keyword_menu a:hover {
+       	background: #2C5D88 url(hm-keyword-page-icon.png) 2px 2px no-repeat;
+        text-decoration: none;
+	color: #fff;
+       	}               
+       #keyword_menu_no_entry {
+        display: none;
+	background: #fff;
+       	border: 1px solid silver;
+	padding: 5px;
+	box-shadow: 4px 4px 8px #888;
+	border-radius: 6px 6px;
+	width: 50%;
+	font-size:1em;
+       }
+   </style>       
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="hmcontextids.js"></script>
 </head>
 <body>
-  <!-- Place holder for the keyword index - this variable is REQUIRED! -->
-  <script type="text/javascript">
+<div id="keyword_menu"></div>
+<div id="keyword_menu_no_entry">To locate information about this keyword, please select one of the subentries in the list.</div>
+<div id="keyword_entry_div"><p>Enter value</p><input type="text" id="keyword_entry" onkeyup="keywordEntryKey()" /></div>
+<div id="keyword_list_div">
+  <select id="keyword_list" size="2">
+  <option value="welcome.html">advisory services</option>
+  <option value="for-partners.html">body of Knowledge</option>
+  <option value="why-onepractice_.html">Bookkeepers</option>
+  <option value="brochure_2.html">Brochure</option>
+  <option value="expporting-and-importing-setti.html">broom button</option>
+  <option value="introduction.html">CA KairosTM</option>
+  <option value="slide-93.html">Call to Action</option>
+  <option value="installation.html">ClickOnce</option>
+  <option value="slide-73.html">commoditise your services</option>
+  <option value="introduction.html">compilation</option>
+  <option value="onepractice.html">Connected Pracitce Architecture</option>
+  <option value="onepractice.html">Connected Practice</option>
+  <option value="release-notes2.html">Data leakage prevention</option>
+  <option value="slide-83.html">Delivery Models</option>
+  <option value="release-notes2.html">Digital rights management</option>
+  <option value="brochure_2.html">distributor channel</option>
+  <option value="slide-59.html">document management</option>
+  <option value="release-notes2.html">Document Meta data</option>
+  <option value="implementation-and-training-op.html">Document Migration</option>
+  <option value="operation.html">Document Migrator</option>
+  <option value="slide-411.html">enterprise features</option>
+  <option value="brochure_2.html">faster sales cycles</option>
+  <option value="using-the-file-name-builder-to.html">File Name Builder</option>
+  <option value="the-hubone-onepractice-archite.html">financial services firms</option>
+  <option value="file-rename-options-tab.html">Find Word in Scan”</option>
+  <option value="3-delivery-models.html">Fully Managed Delivery</option>
+  <option value="links.html">How do I sign up for a Microsoft account?</option>
+  <option value="introduction.html">HubOne</option>
+  <option value="new-way-of-delivery.html">HubOne Partners</option>
+  <option value="new-way-of-delivery.html">implementation</option>
+  <option value="slide-211.html">IT Architecture</option>
+  <option value="set-wfmkey.html">Key for the session</option>
+  <option value="operation.html">Log FIles</option>
+  <option value="logos.html">Logos</option>
+  <option value="links.html">Manage external sharing</option>
+  <option value="advanced-match-options-tab.html">Match Client Name Letter Count</option>
+  <option value="welcome.html">members</option>
+  <option value="the-hubone-onepractice-archite.html">methodology</option>
+  <option value="for-partners.html">Microsoft Help</option>
+  <option value="workflowmax-tab.html">New Zealand</option>
+  <option value="slide-3---office-365.html">Office 365</option>
+  <option value="implementation-and-training-op.html">Office 365 Migration</option>
+  <option value="welcome.html">OneBusiness</option>
+  <option value="brochure_2.html">OneBusiness™</option>
+  <option value="why-onepractice_.html">OnePractice Architecture</option>
+  <option value="the-hubone-onepractice-archite.html">OnePractice Architecture™</option>
+  <option value="logos.html">OnePractice Logo</option>
+  <option value="logos.html">OnePractice Partner Logo</option>
+  <option value="applications.html">OnePractice Portal</option>
+  <option value="implementation-and-training-op.html">OnePractice Portal Installation and Configuration</option>
+  <option value="applications.html">OnePractice Portal Mail Manager</option>
+  <option value="implementation-and-training-op.html">OnePractice Portal Training</option>
+  <option value="the-hubone-onepractice-archite.html">OnePractice Portal™</option>
+  <option value="applications.html">OnePractice Template Manager</option>
+  <option value="applications.html">OnePractice Workflow</option>
+  <option value="brochure_2.html">OnePractice™</option>
+  <option value="the-hubone-onepractice-archite.html">Online Services Partner of the Year</option>
+  <option value="slide-5---our-objectives.html">Our Objectives</option>
+  <option value="links.html">people outside your organization</option>
+  <option value="">PowerShell Modules</option>
+  <option value="powershell-api.html">&nbsp;&nbsp;&nbsp;CRM Module</option>
+  <option value="powershell-api.html">&nbsp;&nbsp;&nbsp;SharePoint Module</option>
+  <option value="powershell-api.html">&nbsp;&nbsp;&nbsp;WorkflowMax Module</option>
+  <option value="brochure_2.html">prescriptive technology</option>
+  <option value="operation.html">Process</option>
+  <option value="3-delivery-models.html">Project Managed Delivery</option>
+  <option value="release-notes2.html">Retention policies</option>
+  <option value="workflowmax-tab.html">Save Button</option>
+  <option value="'Scanned Document Manager','scanned-document-manager.html','Applications','applications.html'">Scanned Document Manager</option>
+  <option value="for-partners.html">sell</option>
+  <option value="set-wfmdefaultregion.html">Set-WFMDefaultRegion</option>
+  <option value="links.html">Share sites</option>
+  <option value="scanned-document-manager.html">SharePoint</option>
+  <option value="sharepoint-document-migrator.html">SharePoint Document Migrator</option>
+  <option value="slide-63.html">SharePoint Online</option>
+  <option value="operation.html">SharePoint Site URL</option>
+  <option value="links.html">Sharing Guide</option>
+  <option value="sign-up2.html">Sign up</option>
+  <option value="applications.html">Single Sign on for Common Cloud Applications</option>
+  <option value="slide-411.html">SMB customers</option>
+  <option value="the-hubone-onepractice-archite.html">Software Developer of the Year</option>
+  <option value="operation.html">Source Directory</option>
+  <option value="3-delivery-models.html">Standard Delivery</option>
+  <option value="operation.html">Target Root Folder</option>
+  <option value="brochure_2.html">targeted customer base</option>
+  <option value="brochure_2.html">technology reseller</option>
+  <option value="release-notes2.html">Unlimited archiving</option>
+  <option value="operation.html">User</option>
+  <option value="release-notes2.html">Version control</option>
+  <option value="introduction.html">Welcome</option>
+  <option value="slide-311.html">whole solution</option>
+  <option value="slide-2---why-do-it_.html">Why Do it?</option>
+  <option value="slide-4---why-office-365.html">Why Office 365</option>
+  <option value="slide-73.html">Why Partner?</option>
+  <option value="implementation-and-training-op.html">Xero Practice Manager Implementation</option>
+</select>
 
-  function hmInitHideLinks(cssCode) {
-  	var styleElement = document.createElement("style");
-  	styleElement.type = "text/css";
-  	if (styleElement.styleSheet) {
-    	styleElement.styleSheet.cssText = cssCode;
-  	}
-  	else {
-    	styleElement.appendChild(document.createTextNode(cssCode));
-  	}
-  	document.getElementsByTagName("head")[0].appendChild(styleElement);
-  }
-
-  hmInitHideLinks("#idx div { display: none }");
-
-  var currentdiv = null;
-  var canhidelinks = true;
-
-  function hmshowLinks(divID) {
-    var thisdiv = document.getElementById(divID);
-    canhidelinks = true;
-    hmhideLinks();
-    if (thisdiv) {
-      currentdiv = thisdiv;
-      $(currentdiv).show();
-      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
-      $(document).mouseup(hmhideLinks);
-    }
-  }
-  function hmdivMouseOver() { canhidelinks = false; };
-  function hmdivMouseOut() { canhidelinks = true; };
-  function hmhideLinks() {
-    if (canhidelinks) {
-      if (currentdiv) {
-        $(currentdiv).hide();
-        $(currentdiv).unbind("onmouseover", "onmouseout");
-      }
-      currentdiv = null;
-      $(document).unbind("onmouseup");
-    }
-  }
-</script>
-<div id="idx" style="margin:0;padding:0;border:none">
-<a name="3" id="3"></a><p class="idxsection">- 3 -</p>
-<p class="idxkeyword"><a href="proposal-template2.html" target="hmcontent"><span class="idxkeyword">365 in 365</span></a></p>
-<a name="A" id="A"></a><p class="idxsection">- A -</p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">accountants</span></a></p>
-<p class="idxkeyword"><a href="overview.html" target="hmcontent"><span class="idxkeyword">Azure</span></a></p>
-<a name="B" id="B"></a><p class="idxsection">- B -</p>
-<p class="idxkeyword"><a href="overview.html" target="hmcontent"><span class="idxkeyword">bigcommerce</span></a></p>
-<p class="idxkeyword"><a href="why-onepractice_.html" target="hmcontent"><span class="idxkeyword">Bookkeepers</span></a></p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">Brochure</span></a></p>
-<a name="C" id="C"></a><p class="idxsection">- C -</p>
-<p class="idxkeyword"><a href="slide-93.html" target="hmcontent"><span class="idxkeyword">Call to Action</span></a></p>
-<p class="idxkeyword"><a href="installation.html" target="hmcontent"><span class="idxkeyword">ClickOnce</span></a></p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">cloud based technology</span></a></p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">coffee per day</span></a></p>
-<p class="idxkeyword"><a href="slide-73.html" target="hmcontent"><span class="idxkeyword">commoditise your services</span></a></p>
-<p class="idxkeyword"><a href="introduction.html" target="hmcontent"><span class="idxkeyword">compilation</span></a></p>
-<a name="D" id="D"></a><p class="idxsection">- D -</p>
-<p class="idxkeyword"><a href="slide-83.html" target="hmcontent"><span class="idxkeyword">Delivery Models</span></a></p>
-<p class="idxkeyword"><a href="overview.html" target="hmcontent"><span class="idxkeyword">distributor</span></a></p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">distributor channel</span></a></p>
-<p class="idxkeyword"><a href="slide-59.html" target="hmcontent"><span class="idxkeyword">document management</span></a></p>
-<p class="idxkeyword"><a href="implementation-and-training-op.html" target="hmcontent"><span class="idxkeyword">Document Migration</span></a></p>
-<p class="idxkeyword"><a href="operation.html" target="hmcontent"><span class="idxkeyword">Document Migrator</span></a></p>
-<a name="E" id="E"></a><p class="idxsection">- E -</p>
-<p class="idxkeyword"><a href="agreement.html" target="hmcontent"><span class="idxkeyword">Enforcement of HubOne Terms and Conditions</span></a></p>
-<p class="idxkeyword"><a href="slide-411.html" target="hmcontent"><span class="idxkeyword">enterprise features</span></a></p>
-<a name="F" id="F"></a><p class="idxsection">- F -</p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">faster sales cycles</span></a></p>
-<p class="idxkeyword"><a href="the-hubone-onepractice-archite.html" target="hmcontent"><span class="idxkeyword">financial services firms</span></a></p>
-<p class="idxkeyword"><a href="3-delivery-models.html" target="hmcontent"><span class="idxkeyword">Fully Managed Delivery</span></a></p>
-<a name="H" id="H"></a><p class="idxsection">- H -</p>
-<p class="idxkeyword"><a href="links.html" target="hmcontent"><span class="idxkeyword">How do I sign up for a Microsoft account?</span></a></p>
-<p class="idxkeyword"><a href="introduction.html" target="hmcontent"><span class="idxkeyword">HubOne</span></a></p>
-<p class="idxkeyword"><a href="agreement.html" target="hmcontent"><span class="idxkeyword">HubOne Partner Agreement</span></a></p>
-<p class="idxkeyword"><a href="new-way-of-delivery.html" target="hmcontent"><span class="idxkeyword">HubOne Partners</span></a></p>
-<p class="idxkeyword"><a href="overview.html" target="hmcontent"><span class="idxkeyword">HubOne Store</span></a></p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">HubOne Subscription</span></a></p>
-<p class="idxkeyword"><a href="agreement.html" target="hmcontent"><span class="idxkeyword">HubOne Terms and Conditions</span></a></p>
-<a name="I" id="I"></a><p class="idxsection">- I -</p>
-<p class="idxkeyword"><a href="new-way-of-delivery.html" target="hmcontent"><span class="idxkeyword">implementation</span></a></p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">Industry Awards</span></a></p>
-<p class="idxkeyword"><a href="slide-211.html" target="hmcontent"><span class="idxkeyword">IT Architecture</span></a></p>
-<a name="L" id="L"></a><p class="idxsection">- L -</p>
-<p class="idxkeyword"><a href="agreement.html" target="hmcontent"><span class="idxkeyword">Limited Right to Resell</span></a></p>
-<p class="idxkeyword"><a href="operation.html" target="hmcontent"><span class="idxkeyword">Log FIles</span></a></p>
-<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k36')"><span class="idxkeyword">Logos</span></a></p>
-<div id="k36" style="position:relative;margin:0 0 0 20px;top:-3px">
-<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="overview2.html" target="hmcontent"><span class="idxlink">Overview</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="logos.html" target="hmcontent"><span class="idxlink">Logos</span></a></td></tr></table></td></tr></table></div>
-<a name="M" id="M"></a><p class="idxsection">- M -</p>
-<p class="idxkeyword"><a href="links.html" target="hmcontent"><span class="idxkeyword">Manage external sharing</span></a></p>
-<p class="idxkeyword"><a href="the-hubone-onepractice-archite.html" target="hmcontent"><span class="idxkeyword">methodology</span></a></p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">Microsoft Office 365</span></a></p>
-<a name="O" id="O"></a><p class="idxsection">- O -</p>
-<p class="idxkeyword"><a href="slide-3---office-365.html" target="hmcontent"><span class="idxkeyword">Office 365</span></a></p>
-<p class="idxkeyword"><a href="implementation-and-training-op.html" target="hmcontent"><span class="idxkeyword">Office 365 Migration</span></a></p>
-<p class="idxkeyword"><a href="welcome.html" target="hmcontent"><span class="idxkeyword">OneBusiness</span></a></p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">OneBusiness™</span></a></p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">OnePractice</span></a></p>
-<p class="idxkeyword"><a href="why-onepractice_.html" target="hmcontent"><span class="idxkeyword">OnePractice Architecture</span></a></p>
-<p class="idxkeyword"><a href="the-hubone-onepractice-archite.html" target="hmcontent"><span class="idxkeyword">OnePractice Architecture™</span></a></p>
-<p class="idxkeyword"><a href="logos.html" target="hmcontent"><span class="idxkeyword">OnePractice Logo</span></a></p>
-<p class="idxkeyword"><a href="logos.html" target="hmcontent"><span class="idxkeyword">OnePractice Partner Logo</span></a></p>
-<p class="idxkeyword"><a href="applications.html" target="hmcontent"><span class="idxkeyword">OnePractice Portal</span></a></p>
-<p class="idxkeyword"><a href="implementation-and-training-op.html" target="hmcontent"><span class="idxkeyword">OnePractice Portal Installation and Configuration</span></a></p>
-<p class="idxkeyword"><a href="applications.html" target="hmcontent"><span class="idxkeyword">OnePractice Portal Mail Manager</span></a></p>
-<p class="idxkeyword"><a href="implementation-and-training-op.html" target="hmcontent"><span class="idxkeyword">OnePractice Portal Training</span></a></p>
-<p class="idxkeyword"><a href="the-hubone-onepractice-archite.html" target="hmcontent"><span class="idxkeyword">OnePractice Portal™</span></a></p>
-<p class="idxkeyword"><a href="applications.html" target="hmcontent"><span class="idxkeyword">OnePractice Template Manager</span></a></p>
-<p class="idxkeyword"><a href="applications.html" target="hmcontent"><span class="idxkeyword">OnePractice Workflow</span></a></p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">OnePractice™</span></a></p>
-<p class="idxkeyword"><a href="the-hubone-onepractice-archite.html" target="hmcontent"><span class="idxkeyword">Online Services Partner of the Year</span></a></p>
-<p class="idxkeyword"><a href="agreement.html" target="hmcontent"><span class="idxkeyword">Order Requirements</span></a></p>
-<p class="idxkeyword"><a href="slide-5---our-objectives.html" target="hmcontent"><span class="idxkeyword">Our Objectives</span></a></p>
-<a name="P" id="P"></a><p class="idxsection">- P -</p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">Partner Price List</span></a></p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">partner program</span></a></p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">Partner Program Agreement</span></a></p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">Partner Program Brochure</span></a></p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">Partner Program Sales Presentation</span></a></p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">Partner Program Sign Up</span></a></p>
-<p class="idxkeyword"><a href="description.html" target="hmcontent"><span class="idxkeyword">pay-as-you go</span></a></p>
-<p class="idxkeyword"><a href="links.html" target="hmcontent"><span class="idxkeyword">people outside your organization</span></a></p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">prescriptive technology</span></a></p>
-<p class="idxkeyword"><a href="operation.html" target="hmcontent"><span class="idxkeyword">Process</span></a></p>
-<p class="idxkeyword"><a href="3-delivery-models.html" target="hmcontent"><span class="idxkeyword">Project Managed Delivery</span></a></p>
-<a name="R" id="R"></a><p class="idxsection">- R -</p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">revenue</span></a></p>
-<a name="S" id="S"></a><p class="idxsection">- S -</p>
-<p class="idxkeyword"><a href="applications.html" target="hmcontent"><span class="idxkeyword">Scanned Document Manager</span></a></p>
-<p class="idxkeyword"><a href="for-partners.html" target="hmcontent"><span class="idxkeyword">sell</span></a></p>
-<p class="idxkeyword"><a href="overview2.html" target="hmcontent"><span class="idxkeyword">Service Provider</span></a></p>
-<p class="idxkeyword"><a href="links.html" target="hmcontent"><span class="idxkeyword">Share sites</span></a></p>
-<p class="idxkeyword"><a href="sharepoint-document-migrator.html" target="hmcontent"><span class="idxkeyword">SharePoint Document Migrator</span></a></p>
-<p class="idxkeyword"><a href="slide-63.html" target="hmcontent"><span class="idxkeyword">SharePoint Online</span></a></p>
-<p class="idxkeyword"><a href="operation.html" target="hmcontent"><span class="idxkeyword">SharePoint Site URL</span></a></p>
-<p class="idxkeyword"><a href="links.html" target="hmcontent"><span class="idxkeyword">Sharing Guide</span></a></p>
-<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k80')"><span class="idxkeyword">Sign up</span></a></p>
-<div id="k80" style="position:relative;margin:0 0 0 20px;top:-3px">
-<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="overview2.html" target="hmcontent"><span class="idxlink">Overview</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sign-up2.html" target="hmcontent"><span class="idxlink">Sign Up</span></a></td></tr></table></td></tr></table></div>
-<p class="idxkeyword"><a href="applications.html" target="hmcontent"><span class="idxkeyword">Single Sign on for Common Cloud Applications</span></a></p>
-<p class="idxkeyword"><a href="slide-411.html" target="hmcontent"><span class="idxkeyword">SMB customers</span></a></p>
-<p class="idxkeyword"><a href="the-hubone-onepractice-archite.html" target="hmcontent"><span class="idxkeyword">Software Developer of the Year</span></a></p>
-<p class="idxkeyword"><a href="operation.html" target="hmcontent"><span class="idxkeyword">Source Directory</span></a></p>
-<p class="idxkeyword"><a href="3-delivery-models.html" target="hmcontent"><span class="idxkeyword">Standard Delivery</span></a></p>
-<a name="T" id="T"></a><p class="idxsection">- T -</p>
-<p class="idxkeyword"><a href="operation.html" target="hmcontent"><span class="idxkeyword">Target Root Folder</span></a></p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">targeted customer base</span></a></p>
-<p class="idxkeyword"><a href="brochure.html" target="hmcontent"><span class="idxkeyword">technology reseller</span></a></p>
-<a name="U" id="U"></a><p class="idxsection">- U -</p>
-<p class="idxkeyword"><a href="operation.html" target="hmcontent"><span class="idxkeyword">User</span></a></p>
-<a name="W" id="W"></a><p class="idxsection">- W -</p>
-<p class="idxkeyword"><a href="introduction.html" target="hmcontent"><span class="idxkeyword">Welcome</span></a></p>
-<p class="idxkeyword"><a href="slide-311.html" target="hmcontent"><span class="idxkeyword">whole solution</span></a></p>
-<p class="idxkeyword"><a href="slide-2---why-do-it_.html" target="hmcontent"><span class="idxkeyword">Why Do it?</span></a></p>
-<p class="idxkeyword"><a href="slide-4---why-office-365.html" target="hmcontent"><span class="idxkeyword">Why Office 365</span></a></p>
-<p class="idxkeyword"><a href="slide-73.html" target="hmcontent"><span class="idxkeyword">Why Partner?</span></a></p>
-<a name="X" id="X"></a><p class="idxsection">- X -</p>
-<p class="idxkeyword"><a href="implementation-and-training-op.html" target="hmcontent"><span class="idxkeyword">Xero Practice Manager Implementation</span></a></p>
+  <select id="keyword_list_dummy" size="5" style="display:none"></select>
 </div>
 
+   <script type="text/javascript">
+     /* Script for keyword listbox */
+     var idxMenu = null;
+     var idxEntries = new Array(); 
+     var idxEntryHeight = 0;
+
+     function keywordHideMenu() {	
+        if (idxMenu!=null) {
+          idxMenu.stop();
+          idxMenu.hide();
+          idxMenu = null;
+        }
+     }     	
+
+     function keywordEntryKey(value) {
+        var aKeyword = $('#keyword_entry').val().toLowerCase();
+     	var list = document.getElementById('keyword_list');
+    	var idx1 = 0;
+    	var idx2 = idxEntries.length-1;
+    	while (idx2>idx1+1) {
+    	  var delta = parseInt((idx2-idx1)/2) + idx1;
+    	  if (aKeyword > idxEntries[delta]) idx1 = delta;
+    	  else idx2 = delta;  
+        }
+    	$('#keyword_entry').unbind('onkeyup');
+    	if (aKeyword < idxEntries[idx1]) idx2 = idx1;
+        list.selectedIndex = idx2;
+        if ((idxEntryHeight>0) && (idx2<idxEntries.length-1)) {
+          $(list).stop();	
+          idx1 = idx2 * idxEntryHeight;
+          if (idx1 > ((idxEntryHeight*idxEntries.length)-$(list).innerHeight())) idx1 = (idxEntryHeight*idxEntries.length)-$(list).innerHeight(); 
+          $(list).scrollTop(idx1);
+        } 
+    	$('#keyword_entry').bind('keywordEntryKey');
+        keywordHideMenu();
+     }
+    
+     function keywordListClick(event) {
+     	var list = document.getElementById('keyword_list');
+        var aKeyword = list.options[list.selectedIndex].text;
+        var aTarget = list.options[list.selectedIndex].value; 
+
+        if (aKeyword.substr(0,1)==String.fromCharCode(160)) {
+          var i = list.selectedIndex-1;
+          var aKw = '';
+          while (i>0) {
+          	aKw = list.options[i].text;
+          	if (aKw.substr(0,1)!=String.fromCharCode(160)) { 
+          	  aKeyword = aKw + ', ' + $.trim(aKeyword);
+          	  break;
+          	}
+          	i--;
+          }
+        }
+
+        $('#keyword_entry').attr('value', aKeyword);        
+        keywordHideMenu();
+
+        //if option.value starts with an "'", it's a list of entries => display menu 
+     	if (aTarget.substring(0,1)==String.fromCharCode(39)) {
+     	  var links = aTarget.substring(1,aTarget.length-1).split("','");
+          var i = 0;
+          var aCode = '';
+          while (i<links.length-1) {
+          	aCode = aCode + '<p><a href="javascript:keywordListJump(' + "'" + links[i+1] + "'" + ')">' + links[i] + '</a></p>';
+          	i = i+2;
+          }
+          
+          idxMenu = $('#keyword_menu');
+          idxMenu.html(aCode);
+          idxMenu.css({'z-index':99, 'position':'absolute', 'right':'4px'});
+          var ypos = event.clientY;
+          if ((ypos + idxMenu.outerHeight()) > $(window).height()) ypos = event.clientY - idxMenu.outerHeight();
+          idxMenu.css('top', ypos + 'px');
+          if (hmAnimate) idxMenu.show('fast');
+          else idxMenu.show();
+     	}
+     	else if ((aTarget=='undefined')||(aTarget=='')) {
+          idxMenu = $('#keyword_menu_no_entry');
+          idxMenu.css({'z-index':99, 'position':'absolute', 'right':'4px', 'opacity':1});
+          var ypos = event.clientY;
+          if ((ypos + idxMenu.outerHeight()) > $(window).height()) ypos = event.clientY - idxMenu.outerHeight();
+          idxMenu.css('top', ypos + 'px');
+          if (hmAnimate) idxMenu.show('fast');
+          else idxMenu.show();
+          idxMenu.fadeOut(5000);
+     	}
+     	else {
+     	  keywordListJump(aTarget);
+     	}	
+     }
+     
+     function keywordListJump(aTarget) {
+	
+	
+	parent.document.getElementById("hmcontent").src = aTarget;
+
+        //Google adwords tracking, if enabled:
+        if (parent.frames.length>0) {
+          if (parent.gaaccount) { 
+            var list = document.getElementById('keyword_list');
+            parent.track("index", idxEntries[list.selectedIndex]); 
+          }
+        }          
+     }
+     
+     $(document).ready( function() {
+       idxEntryHeight = parseInt(($('#keyword_list_dummy').innerHeight()/5)+0.5);
+       if (isIE) idxEntryHeight = 0; //autoscrolling in keyword list works well in IE
+       var kwmain = '';
+       var kw = '';
+       var list = document.getElementById('keyword_list');
+       $(list).click(function(event) { keywordListClick(event) });
+       	
+       for (var i=0; i < list.options.length; i++) {
+         kw = list.options[i].text;
+         
+         if ( (kw.substring(0,3)==String.fromCharCode(160,160,160)) || (kw.substring(0,3)==String.fromCharCode(32,32,32)) ) {
+           kw = kw.substr(3);	
+           idxEntries.push( kwmain+', '+kw.toLowerCase() );
+         }            
+         else {  
+           kwmain = kw.toLowerCase();
+           idxEntries.push(kwmain); 
+         }            
+       }
+
+       $(list).scroll(keywordHideMenu);
+       	
+       $(window).resize(function() { 
+         $('#keyword_entry').css('width', $('#keyword_list').width()+'px');
+	     $('#keyword_list_div').css('top', $('#keyword_entry_div').offset().top + $('#keyword_entry_div').outerHeight() + 5 + 'px');
+       });
+	 
+	   $(window).resize();
+	   
+     });
+   </script>
+ 
 </body>
 </html>
