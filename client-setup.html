@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Client Setup</title>
+   <meta name=viewport content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #2C5D88; min-height: 59px }             
+      #idheader h1 { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "client-setup.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Client Setup</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?client-setup.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      &raquo;No topics above this level&laquo;
+      </p>
+   
+      <h1 class="p_Heading1"><span class="f_Heading1">Client Setup</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <span class="hmbtnprev"></span>
+      <a href="introduction.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <span class="hmbtnnext"></span>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p><span style="font-style: italic;">*Internet is required to complete the client setup. Without it, you will not get the latest updates to the setup tool and you may receive errors related to connectivity. </span></p>
+<p> </p>
+<p><span style="font-weight: bold;">Key Step: </span>It is important for you to verify your time and time zone are both correct on your Online Services clients. As many of the Online services are dependent on certificates, verifying your time settings will help ensure your session runs smoothly.</p>
+<p> </p>
+<p>The following steps will need to be performed once on each of the 8-10 client devices.</p>
+<p> </p>
+<p>After each device completes the client imaging process, they will each need to be configured based upon your CIE deployment scenario. &nbsp; </p>
+<p>Each device should be sitting on the Administrator desktop with the CIE Client Setup Assistant app open. If it is not open, double-click on the CIE Client Setup icon residing on the desktop (for the local administrator account only). </p>
+<p><img alt="clip0141" width="87" height="122" style="margin:0;width:87px;height:122px;border:none" src="clip0141.png"/></p>
+<p>The CIE Client Setup Assistant app will appear; select the Setup tile.</p>
+<p><img alt="clip0142" width="381" height="297" style="margin:0;width:381px;height:297px;border:none" src="clip0142.png"/></p>
+<p>Select the Online Setup button.</p>
+<p><img alt="clip0143" width="363" height="282" style="margin:0;width:363px;height:282px;border:none" src="clip0143.png"/></p>
+<p>Select the Commercial content pack from the drop-down menu.</p>
+<p>Enter the name of the tenant you created for this CIE Client.</p>
+<p>Select the persona you would like to use. (Example: Alan Steiner)</p>
+<p>Click Begin Setup to start the client setup.</p>
+<p><img alt="clip0144" width="507" height="395" style="margin:0;width:507px;height:395px;border:none" src="clip0144.png"/></p>
+<p>The configuration status will appear in the window. </p>
+<p><img alt="clip0145" width="507" height="395" style="margin:0;width:507px;height:395px;border:none" src="clip0145.png"/></p>
+<p>Configuration will restart and automatically log you in to the client and leave you on the desktop. </p>
+<p> </p>
+<p><span style="font-weight: bold;">Key Step: I</span>t is important to run Enabling CRM &amp; SharePoint Integration before setting up the Dynamics CRM App on client machines.</p>
+<p> </p>
+<p>Next, you will need to open Dynamics CRM from the All Apps menu. </p>
+<p><img alt="clip0146" width="498" height="329" style="margin:0;width:498px;height:329px;border:none" src="clip0146.png"/></p>
+<p>Once open, you will need to enter the address for CRM online https://tenantname.crm.dynamics.com and click the Next arrow.</p>
+<p><img alt="clip0147" width="468" height="314" style="margin:0;width:468px;height:314px;border:none" src="clip0147.png"/></p>
+<p>Select Work or School account, if prompted, and Enter in the credentials for the user (user@tenant.onmicrosoft.com and pass@word1) and click Sign in.</p>
+<p><img alt="clip0148" width="374" height="375" style="margin:0;width:374px;height:375px;border:none" src="clip0148.png"/></p>
+<p>Wait a few minutes and you will see the CRM Home Screen, then you can close the Dynamics CRM App.</p>
+<p><img alt="clip0149" width="597" height="338" style="margin:0;width:597px;height:338px;border:none" src="clip0149.png"/></p>
+<p>Click the Windows Key &gt; Settings &gt; System &gt; Default Apps</p>
+<p>Scroll to the bottom and click Set defaults by app</p>
+<p>Select OneNote 2016 and click Set this program as default and OK. Close all open windows.</p>
+<p><img alt="clip0150" width="632" height="299" style="margin:0;width:632px;height:299px;border:none" src="clip0150.png"/> </p>
+<p>&nbsp;</p>
+<p> </p>
+<p>Open OneNote 2016 from the All apps menu and use the ESC key to close the Connect to the cloud dialog window.  </p>
+<p><img alt="clip0151" width="485" height="306" style="margin:0;width:485px;height:306px;border:none" src="clip0151.png"/></p>
+<p>Close OneNote.</p>
+<p> </p>
+<p>Open Internet Explorer, choose Use recommended security and compatibility settings and click OK. If you are prompted, click Enable for the Skype for Business Browser Helper.</p>
+<p><img alt="clip0152" width="682" height="57" style="margin:0;width:682px;height:57px;border:none" src="clip0152.png"/></p>
+<p>If prompted to disable add-ons, pull down the menu option to select Don't disable.</p>
+<p><img alt="clip0153" width="682" height="122" style="margin:0;width:682px;height:122px;border:none" src="clip0153.png"/></p>
+<p>If prompted, type in the user name (for example, karenb@&lt;yourtenantname&gt;.onmicrosoft.com) and password (pass@word1). Check Keep me signed in and then click Sign in.</p>
+<p><img alt="clip0154" width="682" height="249" style="margin:0;width:682px;height:249px;border:none" src="clip0154.png"/></p>
+<p>If prompted to save your password, click Yes. </p>
+<p>Click on the second browser tab to go to https://www.yammer.com/login. </p>
+<p><img alt="clip0155" width="524" height="343" style="margin:0;width:524px;height:343px;border:none" src="clip0155.png"/></p>
+<p>Enter the persona's username and password on the Yammer sign in page, select Remember me and allow the browser to remember the password.</p>
+<p><img alt="clip0156" width="583" height="333" style="margin:0;width:583px;height:333px;border:none" src="clip0156.png"/></p>
+<p> </p>
+<p>Return to the Office 365 browser tab, click on OneDrive tile from the Office 365 App Switcher.</p>
+<p> <img alt="clip0157" width="521" height="545" style="margin:0;width:521px;height:545px;border:none" src="clip0157.png"/></p>
+<p>&nbsp;</p>
+<p>Click Next. </p>
+<p><img alt="clip0158" width="519" height="468" style="margin:0;width:519px;height:468px;border:none" src="clip0158.png"/></p>
+<p> </p>
+<p>Click Sync above the document list. </p>
+<p> </p>
+<p><img alt="clip0159" width="527" height="258" style="margin:0;width:527px;height:258px;border:none" src="clip0159.png"/></p>
+<p> </p>
+<p> </p>
+<p>Tap or click Sync now and then Sync Now again… </p>
+<p> <img alt="clip0160" width="593" height="375" style="margin:0;width:593px;height:375px;border:none" src="clip0160.png"/></p>
+<p><img alt="clip0161" width="587" height="345" style="margin:0;width:587px;height:345px;border:none" src="clip0161.png"/></p>
+<p><img alt="clip0162" width="601" height="359" style="margin:0;width:601px;height:359px;border:none" src="clip0162.png"/></p>
+<p>&nbsp;</p>
+<p> </p>
+<p>&nbsp;</p>
+<p> </p>
+<p>&nbsp;</p>
+<p>before finally tapping or clicking on Show my files…, which takes us to the desktop File Explorer.</p>
+<p> <img alt="clip0163" width="789" height="469" style="margin:0;width:789px;height:469px;border:none" src="clip0163.png"/></p>
+<p>&nbsp;</p>
+<p>Return to the Office 365 browser tab, click on Sites in the landing page menu and then Home. </p>
+<p><img alt="clip0164" width="587" height="333" style="margin:0;width:587px;height:333px;border:none" src="clip0164.png"/></p>
+<p>Open the persona's About Me page by clicking on the persona's picture in the ribbon and clicking About Me.  </p>
+<p><img alt="clip0165" width="321" height="330" style="margin:0;width:321px;height:330px;border:none" src="clip0165.png"/></p>
+<p>If the picture does not populate in the header, click Edit Profile.</p>
+<p><img alt="clip0166" width="447" height="180" style="margin:0;width:447px;height:180px;border:none" src="clip0166.png"/></p>
+<p>Click Change your photo.</p>
+<p><img alt="clip0167" width="459" height="298" style="margin:0;width:459px;height:298px;border:none" src="clip0167.png"/></p>
+<p>Wait for the photo to populate on the Change Photo screen, then click Save and OK.</p>
+<p><img alt="clip0168" width="386" height="276" style="margin:0;width:386px;height:276px;border:none" src="clip0168.png"/></p>
+<p>Click on Office 365 in the navigation menu to return to the Office 365 landing page. </p>
+<p>Open Outlook 2016 from the Start menu or All apps menu. Outlook will automatically set up the persona's account and populate the inbox with all session emails. </p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Technical Consideration: </span>If the Outlook account is not connected to the tenant, DLP policies used during the session will not be available on that client device.</p>
+<p> </p>
+<p><span style="font-weight: bold;">Technical Consideration: </span>If the tenant you created did not include CRM, you will get a series of prompts at the beginning of set up process for Outlook. You should cancel the CRM configuration process and proceed with the remaining client set up steps. </p>
+<p> </p>
+<p>When Outlook 2016 is open, verify that it is connected to the online tenant by clicking on File &gt; Office Account. Your persona name should be listed in Connected Services. If it is not, click Go online to connect the account to the tenant.</p>
+<p><img alt="clip0169" width="507" height="288" style="margin:0;width:507px;height:288px;border:none" src="clip0169.png"/></p>
+<p>You can also delete the &quot;You've logged in to Yammer&quot; email or any additional mail that was generated in the tenant since the original provisioning.</p>
+<p> </p>
+<p>Note: The CRM for Outlook plug-in is included in the client image and should automatically install after opening Outlook 2016. You may have to complete the wizard manually if it does not complete the automated installation steps. </p>
+<p> <img alt="clip0170" width="563" height="191" style="margin:0;width:563px;height:191px;border:none" src="clip0170.png"/></p>
+<p>Once the CRM organization connection is made, you may exit. This may take a few minutes to complete.</p>
+<p>&nbsp;</p>
+<p>Finally, open Skype for Business 2016 from the Start menu or All apps menu so the persona images can populate and it will be available at the beginning of the session.</p>
+<p><img alt="clip0171" width="201" height="446" style="margin:0;width:201px;height:446px;border:none" src="clip0171.png"/></p>
+<p>The device is now fully setup and ready for the CIE session. </p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Facilitation Note:</span> If you are going to show EMS features during your Commercial CIE session, you should also enroll the device in Intune prior to the session. See Intune Guidance in the Appendix &gt; Advanced Setup section for more details.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Important Note: </span>The Internet Explorer browser should be left open and the device should not be shut down or restarted prior to the session. This will allow the device to retain the Yammer and SharePoint logins and make user experience smoother during the session. </p>
+<p> </p>
+<p>The scenarios in the CIE Facilitation Guide are written using Internet Explorer 11 due to some limited functionality in Microsoft Edge. You can still showcase Microsoft Edge during your session, but it is recommended that you test those scenarios in advance. </p>
+<p>Repeat the steps in this section on each client device. </p>
+<p>O</p>
+<p>nce complete, continue on to Windows Phone 8.1 device setup.</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
