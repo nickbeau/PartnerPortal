@@ -81,6 +81,18 @@
    </style>       
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){
+     var parentScope = (parent.hmNavigationFrame);
+     if (parentScope) parent.currentNav("index");
+	$("a[target='hmcontent']").on("click",function(event){
+		$("p.hilite").removeClass("hilite");
+		$(this).parent("p").addClass("hilite");
+		if (parentScope)
+			window.parent.showNav("toggle");
+		});
+        });
+   </script>
    <script type="text/javascript" src="hmcontextids.js"></script>
 </head>
 <body>
@@ -140,6 +152,8 @@
   <option value="new-way-of-delivery.html">implementation</option>
   <option value="terms-and-conditions.html">industry standards</option>
   <option value="installation-guide.html">installation guide</option>
+  <option value="%A0_1.html">Internet browser</option>
+  <option value="%A0_1.html">Invite people</option>
   <option value="slide-211.html">IT Architecture</option>
   <option value="understanding-the-platform.html">Kairos Immersion Experience</option>
   <option value="set-wfmkey.html">Key for the session</option>
@@ -150,6 +164,7 @@
   <option value="logos.html">Logos</option>
   <option value="links.html">Manage external sharing</option>
   <option value="advanced-match-options-tab.html">Match Client Name Letter Count</option>
+  <option value="%A0_1.html">meeting notes</option>
   <option value="welcome.html">members</option>
   <option value="the-hubone-onepractice-archite.html">methodology</option>
   <option value="software-included.html">Microsoft Application Virtualization</option>
@@ -159,10 +174,14 @@
   <option value="software-included.html">Microsoft Project® Professional Plus 2016</option>
   <option value="software-included.html">Microsoft Visio® Professional Plus 2016</option>
   <option value="%A0_11.html">move an email on a Windows Phone 8.1</option>
+  <option value="%A0_1.html">new page</option>
   <option value="workflowmax-tab.html">New Zealand</option>
   <option value="'Slide 3 - Office 365','slide-3---office-365.html','Understanding the Platform','understanding-the-platform.html'">Office 365</option>
   <option value="software-included.html">Office 365 (E5)</option>
+  <option value="%A0_1.html">Office 365 App Switcher</option>
   <option value="implementation-and-training-op.html">Office 365 Migration</option>
+  <option value="%A0_1.html">offline access</option>
+  <option value="%A0_1.html">OneDrive</option>
   <option value="'Introduction','introduction.html','Welcome','welcome.html','OnePractice','onepractice.html','Brochure','brochure_2.html'">OnePractice</option>
   <option value="'OnePractice','onepractice.html','Why OnePractice?','why-onepractice_.html'">OnePractice Architecture</option>
   <option value="the-hubone-onepractice-archite.html">OnePractice Architecture™</option>
@@ -180,9 +199,11 @@
   <option value="%A0_6.html">Outlook 2016</option>
   <option value="links.html">people outside your organization</option>
   <option value="terms-and-conditions.html">permits</option>
+  <option value="%A0_1.html">portal.microsoftonline.com</option>
   <option value="%A0_6.html">Power BI Pro Desktop</option>
   <option value="%A0_6.html">Power BI Pro reports</option>
   <option value="%A0_6.html">Power View and 3D Maps</option>
+  <option value="%A0_1.html">PowerPoint</option>
   <option value="">PowerShell Modules</option>
   <option value="powershell-api.html">&nbsp;&nbsp;&nbsp;CRM Module</option>
   <option value="powershell-api.html">&nbsp;&nbsp;&nbsp;SharePoint Module</option>
@@ -216,6 +237,7 @@
   <option value="office-365-deployment-scenario.html">standalone KIE solution</option>
   <option value="3-delivery-models.html">Standard Delivery</option>
   <option value="terms-and-conditions.html">STANDARD TERMS AND CONDITIONS</option>
+  <option value="%A0_1.html">Sync</option>
   <option value="'Power user guide','%A0_11.html','Power User Guide','%A0_6.html'">sync online notebook to device for offline access</option>
   <option value="operation.html">Target Root Folder</option>
   <option value="brochure_2.html">targeted customer base</option>
