@@ -1377,7 +1377,7 @@ pagedata = [ ["./3-delivery-models.html","The HubOne Partner Program &#62; Descr
 ["./%C2%A0_23.html","Mobile Productivity","Mobile Productivity Navigation: No topics above this level Mobile Productivity Facilitation Tip: If you are using an Android or iOS device to show...",""],
 ["./%C2%A0_24.html","Personalised Insights","Personalised Insights Navigation: No topics above this level Personalised Insights To use Delve and Skype for Business: Navigate to portal.microso...",""],
 ["./%C2%A0_25.html","Sales Productivity","Sales Productivity Navigation: No topics above this level Sales Productivity To track emails in Dynamics CRM: Navigate to the Internet browser. Cl...",""],
-["./%C2%A0_3.html","Use social tools to find experts and answers","Use social tools to find experts and answers Navigation: No topics above this level Use social tools to find experts and answers Use social tools ...",""],
+["./%C2%A0_3.html","Use social tools to find experts and answers","Use social tools to find experts and answers Navigation: No topics above this level Use social tools to find experts and answers Karen wants to be...",""],
 ["./%C2%A0_4.html","Visualise and analyze complex data","Visualise and analyze complex data Navigation: No topics above this level Visualise and analyze complex data The team decides to review BI reports...",""],
 ["./%C2%A0_5.html","Coauthor and share content quickly","Coauthor and share content quickly Navigation: No topics above this level Coauthor and share content quickly Karen wants her team to help her coau...",""],
 ["./%C2%A0_6.html","Power User Guide","Power User Guide Navigation: No topics above this level Power User Guide To view emails on Windows Phone 8.1: Swipe up to Start screen. Tap the Ou...",""],
