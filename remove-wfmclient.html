@@ -29,7 +29,7 @@
       /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
          has at least the same height as the header of the navigation panel left of it */
       #idheader table { background: #2C5D88; min-height: 59px }             
-      #idheader h1 { color: #FFF }     
+      #idheader h1 span { color: #FFF }     
       #idnav {
         text-align: right;
         width: 126px;
@@ -122,16 +122,16 @@
 
 <!--ZOOMRESTART-->
 <p><span style="font-weight: bold;">Overview: </span></p>
-<p>@@@</p>
+<p>Removes a WorkflowMax Client from the database. <span style="font-style: italic;">Note it actually marks the client as deleted but does not really remove it. Therefore you can never add a client with the same Tax Number</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: bold;">Input Parameters:</span></p>
-<p>@@@</p>
+<p>ClientID</p>
 <p>&nbsp;</p>
 <p><span style="font-weight: bold;">Output Parameters:</span></p>
-<p>@@@</p>
+<p>1 if successful</p>
 <p>&nbsp;</p>
 <p><span style="font-weight: bold;">Example</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">@@@</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Remove-WFMClient&nbsp;-ClientID&nbsp;643839</span></p>
 
 <!--ZOOMSTOP-->
 </div></div>

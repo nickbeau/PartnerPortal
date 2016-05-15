@@ -22,6 +22,11 @@ span.f_Heading1 /* Heading1 */
  font-size: 21px;
  font-weight: bold;
 }
+span.f_Heading2 /* Heading2 */
+{
+ font-size: 19px;
+ font-weight: bold;
+}
 span.f_Hyperlink /* Hyperlink */
 {
  font-size: 13px;
@@ -59,6 +64,15 @@ p /* Normal */
  font-size: 16px;
 }
 .p_Heading1 /* Heading1 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.p_Heading2 /* Heading2 */
 {
  font-size: 100%;
  font-weight: normal;
