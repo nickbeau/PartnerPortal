@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-   <title>Knowledgebase and FAQ &gt; Adding your own tiles to the Modern Practice Homepage</title>
+   <title>Knowledgebase and FAQ &gt; Adding your own tiles to the OnePractice Homepage</title>
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -89,7 +89,7 @@
 <body>
 
 
-<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Adding your own tiles to the Modern Practice Homepage</span></h1>
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Adding your own tiles to the OnePracticeModern Practice Homepage</span></h1>
 </div>
 <div id="idheader">
 <div id="idheaderbg">
@@ -101,12 +101,12 @@
       
       <a href="knowledgebase.html">Knowledgebase and FAQ</a>&nbsp;&gt;</p>
    
-      <h1 class="p_Heading1"><span class="f_Heading1">Adding your own tiles to the Modern Practice Homepage</span></h1>
+      <h1 class="p_Heading1"><span class="f_Heading1">Adding your own tiles to the OnePracticeModern Practice Homepage</span></h1>
 
     </td>
     <td class="topichead" id="idnav">
       
-      <a href="modern-practice-3_0-training-n.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="how-to-resolve-issues-with-exc.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
       <a href="knowledgebase.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
       <a href="how-to-create-templates-for-th.html" title="Next Topic"><span class="hmbtnnext"></span></a>
       
@@ -121,7 +121,13 @@
 <!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
 
 <!--ZOOMRESTART-->
-<p>Enter topic text here.</p>
+<p>In order to add your own tiles with their own hyperlinks to your OnePractice front page follow these simple steps (please note a basic knowledge of HTML is probably a help):</p>
+<p>&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Create the tile using PowerPoint or another application like Photoshop or similar. The tile must be 234px X 234px to conform to the size standard. Save it as .jpeg or .png. <span style="font-style: italic;">Note there is a powerpoint template for tiles <a href="Tiles.pptx" class="filelink">here</a></span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Upload the image to your SiteAssets library in SharePoint. This is available by clicking on Site Content from the Settings menu.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span>Edit the HTML on the front page by clicking the “PAGE” tab and then “Edit”.<br />
+<img alt="clip0406" width="509" height="297" style="margin:0;width:509px;height:297px;border:none" src="clip0406.png"/></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span>Now click the “Edit Source” button which will allow you to directly edit the HTML. You will need to understand a tiny bit of HTML in order to do this.<br />
+<img alt="clip0407" width="624" height="130" style="margin:0;width:624px;height:130px;border:none" src="clip0407.png"/></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">5.</span>The default content consists of one HTML &lt;table&gt; with 3 HTML rows &lt;tr&gt;.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">6.</span>To add another row insert your own &lt;tr&gt; after the second last row &lt;tr&gt;. The final &lt;tr&gt; must remain at the bottom of the table to keep format consistent.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">7.</span>Now add your own HTML table cell in the following format pointing to your new uploaded tile image<br />
+<span class="f_CodeExample">&lt;td&lt;a href=&quot;http://mytargetsite.com&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;MyNewTile.png&quot; src=&quot;SiteAssets/MyNewTile.png&quot; style=&quot;margin: 8px;&quot;/&gt;&lt;/a&gt;&lt;/td&gt;</span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">8.</span>Click OK.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 0px;"><span style="font-style:italic; font-size:16px; font-family: 'Tahoma';color:#000000;display:inline-block;width:20px;margin-left:-20px">9.</span>Click Save.</p><p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <!--ZOOMSTOP-->
 </div></div>

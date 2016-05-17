@@ -108,7 +108,7 @@
       
       <a href="turn-on-new-document---link-to.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
       <a href="knowledgebase.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
-      <a href="how-to-configure-the-modern-pr.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      <span class="hmbtnnext"></span>
       
     </td>
   </tr>  
@@ -121,7 +121,68 @@
 <!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
 
 <!--ZOOMRESTART-->
-<p>Enter topic text here.</p>
+<p>Domains are managed by using a worldwide system of domain registrars and databases. The Domain Name System (DNS) provides a mapping between human-readable computer hostnames and the IP addresses used by networking equipment. An understanding of DNS and domain registrar basics will help administrators manage domains in Microsoft Office 365.</p>
+<p>&nbsp;</p>
+<p>Also, it’s helpful to have a basic understanding of DNS and the difference between domain registrars and domain hosting services. Understanding these terms can help you understand how to register and manage domains.</p>
+<p>&nbsp;</p>
+<h1 class="p_Heading1"><span class="f_Heading1">Domain names</span></h1>
+<h1 class="p_Heading1">Domain names are used in URLs and email addresses. Domain names are constructed in levels. For example, mail.contoso.com is a domain name with the following three levels:</h1>
+<p>&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 0px;"><span style="font-size:16px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>.com is the top-level domain</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 0px;"><span style="font-size:16px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>contoso is the second-level domain</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 0px;"><span style="font-size:16px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>mail is the third-level domain</p><p>&nbsp;</p>
+<p><span style="font-weight: bold;">Note: </span>Sometimes third-level domains are used to designate webpages that serve specific functions, such as blog.contoso.com. &nbsp; &nbsp; &nbsp; </p>
+<p>&nbsp;</p>
+<h1 class="p_Heading1"><span class="f_Heading1">Understand DNS record types and functions</span></h1>
+<h1 class="p_Heading1">DNS records are used to direct traffic to and from your domain. These records associate a domain name with a specific IP address. The following table describes frequently used DNS records and their functions.</h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="width:90%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>Name server record</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Identifies which name servers are the authoritative name servers for a specific domain. DNS information can be cached in several name servers for a period of time, but when the cache expires, non-authoritative name servers contact the authoritative name server for updated information about a domain.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>A record (address record)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Associates a domain name with an IP address.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>CNAME (Alias or canonical name) record</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Specifies that the domain name is an alias of another canonical domain name. When a name server looks up a domain and finds a CNAME record, it replaces the first domain name with the CNAME and then looks up the new name.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>MX (mail exchanger) record</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Identifies the server to which email is directed. It also contains a priority field so that mail can be directed to multiple servers in a prescribed order.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>SPF (sender policy framework)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>An email validation system designed to help prevent email spoofing and phishing.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>SRV (service record)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>Specifies information about available services. SRV records are used by Microsoft Skype for Business and Exchange Online to coordinate the flow of information between Office 365 services.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>TTL (time-to-live)</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p>The amount of time that a DNS record is retained or cached by a name server or other servers before the server does another lookup on the authoritative name server. You use this to control the number of queries made to a given name server. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <!--ZOOMSTOP-->
 </div></div>
