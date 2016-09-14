@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="generator" content="Help &amp; Manual" />
    <meta name="keywords" content="" />
-   <meta name="description" content="" />
+   <meta name="description" content="You can use Windows PowerShell to turn external sharing on or off. Using the SharePoint Online Management Shell, administrators can now enforce new controls over how external..." />
    <link type="text/css" href="default.css" rel="stylesheet" />
    <link type="text/css" href="custom.css" rel="stylesheet" />
 
@@ -123,14 +123,14 @@
 <!--ZOOMRESTART-->
 <p>You can use Windows PowerShell to turn external sharing on or off. Using the SharePoint Online Management Shell, administrators can now enforce new controls over how external users accept invitations. When enabled, the RequireAcceptingAccountMatchInvitedAccount parameter requires external users to accept invitations with the email account with which they originally received the invitation.</p>
 <p>&nbsp;</p>
-<p>If this parameter is not set or is set to null:   </p>
+<p><span style="font-weight: bold;">If this parameter is not set or is set to null:   </span></p>
 <p>When a user shares with an external user, they enter an e-mail like stephen@contoso.com, and an email is sent to Stephen at stephen@contoso.com. When he attempts to accept the invitation (by clicking the link in the email), he can log in with any account he wants to use. For example, he could use stephen@contoso.com, stephen@live.com, or even dwight@contoso.com. The sharing email can be forwarded and accepted by anyone. This system ensures that external users who use email aliases or who do not have a Microsoft account or organization account are able to accept the invitation.</p>
 <p>&nbsp;</p>
-<p>If this parameter is set to true:   </p>
+<p><span style="font-weight: bold;">If this parameter is set to true: </span>  </p>
 <p>The RequireAcceptingAccountMatchInvitedAccount parameter ensures that the user who receives the invitation is also the user who accepts it. If an invitation is sent to stephen@contoso.com, only a user who can log into stephen@contoso.com is able to accept the invitation. Any other email account displays an error page that directs to user to use the appropriate account.</p>
-<p>Notes that this does not apply to invitations that have previously been accepted in SharePoint Online and it only affects external sharing invitations that are generated after the parameter has been set. It will also not affect external users who have previously accepted an invitation. They will be able to log-in and use the system as normal. This feature does not work with e-mail aliases.</p>
+<p>Note that this does not apply to invitations that have previously been accepted in SharePoint Online and it only affects external sharing invitations that are generated after the parameter has been set. It will also not affect external users who have previously accepted an invitation. They will be able to log-in and use the system as normal. This feature does not work with e-mail aliases.</p>
 <p>&nbsp;</p>
-<p>For detailed information about the cmdlet and parameters in Windows PowerShell, see <a href="use-windows-powershell-to-mana.html" class="topiclink">Set-SPOTenant</a>.</p>
+<p>For detailed information about the <a href="https://msdn.microsoft.com/en-au/library/ms714395(v=vs.85).aspx" target="_blank" class="weblink">cmdlet</a> and parameters in Windows PowerShell, see <a href="https://technet.microsoft.com/en-us/library/fp161390.aspx" target="_blank" class="weblink">Set-SPOTenant</a>.</p>
 
 <!--ZOOMSTOP-->
 </div></div>
